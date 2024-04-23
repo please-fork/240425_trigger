@@ -1,4 +1,4 @@
-name: trigger by push
+name: trigger by push I
 # on: push
 on:
     push:
@@ -6,17 +6,18 @@ on:
         branches:
             - 'main'
         # dev 브랜치 푸시 시에 트리거 제외
-        branches-ignore:
-            - 'dev'
+        # branches-ignore:
+            # - 'dev'
         # md 파일이 바뀌었을 때만 트리거
         paths:
             - '**.md'
         # yml 파일이 바뀌었을 때는 제외하고 트리거
-        paths-ignore:
-            - '**.yml'
+        # paths-ignore:
+            # - '**.yml'
+# 필터와 ignore 중 하나씩만 사용 가능
 
 jobs:
-    say_hello_push:
+    say_hello_push1:
         runs-on: ubuntu-latest
         steps:
             - run: echo "Hello! I'm triggered by ${{ github.event_name }}!!!"
