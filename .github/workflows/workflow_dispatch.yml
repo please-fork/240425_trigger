@@ -1,7 +1,7 @@
 name: trigger by workflow_dispatch 
 on: workflow_dispatch
 jobs:
-    say_hello:
+    say_hello_manual:
         runs-on: ubuntu-latest
         steps:
             - run: echo "Hello! I'm triggered by ${{ github.event_name }}!!!"
