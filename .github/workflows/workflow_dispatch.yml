@@ -1,0 +1,7 @@
+name: trigger by workflow_dispatch 
+on: workflow_dispatch
+jobs:
+    say_hello:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo 'Hello! I\'m triggered by workflow_dispatch!!!'
