@@ -4,4 +4,4 @@ jobs:
     say_hello:
         runs-on: ubuntu-latest
         steps:
-            - run: echo "Hello! I'm triggered by workflow_dispatch!!!"
+            - run: echo "Hello! I'm triggered by ${{ github.event }}!!!"
