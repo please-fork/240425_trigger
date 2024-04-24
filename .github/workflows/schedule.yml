@@ -17,5 +17,5 @@ jobs:
               if: github.event.schedule == '5,15,25,35,45,55 * * * *'
               run: echo "x5분을 알려드려요"
             - name: strange
-              if: !github.event.schedule
+              if: github.event.schedule == false
               run: echo "뭔가 이상한데요?"
