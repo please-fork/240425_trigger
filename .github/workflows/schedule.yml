@@ -4,6 +4,7 @@ on:
         # https://crontab.guru/
         - cron: '5,15,25,35,45,55 * * * *'
         - cron: '0,10,20,30,40,50 * * * *'
+    workflow_dispatch:
 
 jobs:
     say_hello_cron:
