@@ -1,0 +1,20 @@
+name: trigger by schedule
+on:
+    schedule:
+        # https://crontab.guru/
+        - cron: '5,15,25,35,45,55 * * * *'
+        - cron: '0,10,20,30,40,50 * * * *'
+
+jobs:
+    say_hello_cron:
+        runs-on: ubuntu-latest
+        steps:
+            - name: zero
+              if: github.event.schedule == '0,10,20,30,40,50 * * * *'
+              run: echo "x0분을 알려드려요"
+            - name: five
+              if: github.event.schedule == '5,15,25,35,45,55 * * * *'
+              run: echo "x5분을 알려드려요"
+            - name: strange
+              if: !github.event.schedule
+              run: echo "뭔가 이상한데요?"
