@@ -5,3 +5,5 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - run: echo "Hello! I'm triggered by ${{ github.event_name }}!!!"
+            - run: echo "My Owner is ${{ github.repository_owner }}!!!"
+            - run: echo "MY Repo Name is ${{ github.event.repository.name }}!!!"
